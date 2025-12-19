@@ -53,7 +53,8 @@ The following screenshots are included to demonstrate Git operations:
 -->branch creation
 ## 📸 Git Commit History
 
-![Git Log Screenshot](docs/lsd.png)
+![Git Log Screenshot](branch_creation.png)
+
 
 - Git commit history (`git log --oneline`)
 - Branch creation and listing
