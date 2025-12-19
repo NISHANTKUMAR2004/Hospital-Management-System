@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apollo HMS</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- UI Enhancements -->
+  <link rel="stylesheet" href="ui-enhancements.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="text-white font-[Poppins] min-h-screen">
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="glass sticky top-0 z-50 shadow-xl border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-extrabold tracking-wide
+               bg-gradient-to-r from-cyan-400 to-purple-500
+               text-transparent bg-clip-text">
+      🏥 Apollo HMS
+    </h1>
+
+    <div class="flex items-center gap-4">
+      <span class="font-semibold text-emerald-400">Admin</span>
+
+      <button onclick="toggleDarkMode()"
+        class="px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 transition">
+        🌙
+      </button>
+
+      <button onclick="logout()"
+        class="px-4 py-1 rounded-lg bg-red-500 hover:bg-red-600 transition text-white">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= STATS ================= -->
+<section class="max-w-7xl mx-auto px-6 mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+
+  <div class="stat-card stat-blue">
+    <div class="stat-icon text-yellow-300">🧍‍♂️</div>
+    <p class="stat-title">Total Patients</p>
+    <h2 id="statPatients" class="stat-value">0</h2>
+  </div>
+
+  <div class="stat-card stat-green">
+    <div class="stat-icon text-emerald-300">🧑‍⚕️</div>
+    <p class="stat-title">Doctors</p>
+    <h2 id="statDoctors" class="stat-value">0</h2>
+  </div>
+
+  <div class="stat-card stat-yellow">
+    <div class="stat-icon text-orange-300">⏳</div>
+    <p class="stat-title">Pending</p>
+    <h2 id="statPending" class="stat-value">0</h2>
+  </div>
+
+  <div class="stat-card stat-purple">
+    <div class="stat-icon text-purple-300">📅</div>
+    <p class="stat-title">Today</p>
+    <h2 id="statToday" class="stat-value">0</h2>
+  </div>
+
+</section>
+<!-- 
+<!-- ================= CHARTS ================= -->
+<div class="grid md:grid-cols-2 gap-6 mt-10">
+
+  <!-- LINE CHART -->
+  <div class="card p-4 h-[280px]">
+    <h3 class="text-sm font-bold mb-2 text-cyan-300">
+      📈 Appointments Trend
+    </h3>
+    <canvas id="appointmentsChart" class="w-full h-full"></canvas>
+  </div>
+
+  <!-- DOUGHNUT CHART -->
+  <div class="card p-4 h-[280px] flex flex-col items-center">
+    <h3 class="text-sm font-bold mb-2 text-emerald-300">
+      🟢 Appointment Status
+    </h3>
+    <canvas id="statusChart" class="max-h-[220px]"></canvas>
+  </div>
+
+</div>
+
+
+<!-- ================= NAV BUTTONS ================= -->
+<section class="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-2 md:grid-cols-5 gap-4">
+
+  <button class="dashboard-btn" onclick="showSection('patients')">
+    🧍 Patients
+  </button>
+
+  <button class="dashboard-btn" onclick="showSection('doctors')">
+    🧑‍⚕️ Doctors
+  </button>
+
+  <button class="dashboard-btn" onclick="showSection('appointments')">
+    📅 Book Appointment
+  </button>
+
+  <button class="dashboard-btn" onclick="showSection('resolve')">
+    🩺 Resolve
+  </button>
+
+  <button class="dashboard-btn" onclick="showSection('completed')">
+    ✅ Completed
+  </button>
+
+</section> -->
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="max-w-7xl mx-auto px-6 mt-12 pb-20">
+  <h2 id="content-title"
+      class="text-4xl font-extrabold mb-8
+             bg-gradient-to-r from-cyan-400 to-purple-500
+             text-transparent bg-clip-text">
+    Dashboard
+  </h2>
+
+  <div id="content-body"></div>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div id="app-modal"
+     class="hidden fixed inset-0 bg-black/70 z-50
+            flex items-center justify-center">
+
+  <div class="glass w-full max-w-xl rounded-2xl p-6 relative
+              animate-modal border border-white/20 shadow-2xl">
+
+    <button onclick="hideModal()"
+      class="absolute top-3 right-4 text-xl hover:scale-125 transition">
+      ✖
+    </button>
+
+    <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ================= SCRIPT ================= -->
+<script src="app.js"></script>
+
+</body>
+</html>
