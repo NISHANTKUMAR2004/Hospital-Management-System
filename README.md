@@ -31,3 +31,44 @@ Hospital-Management-System/
 
 Basic manual testing was performed to verify frontend navigation
 and backend server startup during development.
+
+## 🛠️ Git Commands Used
+
+The following Git commands were used during the development of this project:
+
+- `git init` – Initialize local Git repository  
+- `git status` – Check repository status  
+- `git add` – Stage changes  
+- `git commit` – Commit changes with meaningful messages  
+- `git branch` – Create and list branches  
+- `git checkout` – Switch between branches  
+- `git merge` – Merge branches  
+- `git remote add origin` – Connect local repo to GitHub  
+- `git push` – Push commits to remote repository  
+- `git pull` – Sync changes from GitHub  
+
+## 📸 Screenshots
+
+The following screenshots are included to demonstrate Git operations:
+
+- Git commit history (`git log --oneline`)
+- Branch creation and listing
+- Merge operations
+- Merge conflict and resolution
+- GitHub repository view
+
+## ⚠️ Challenges Faced
+
+- Managing multiple branches simultaneously  
+- Understanding and resolving merge conflicts  
+- Maintaining meaningful commit messages  
+- Keeping the main branch stable during development  
+
+These challenges were resolved by following Git best practices and careful conflict resolution.
+
+## ✅ Conclusion
+
+This project helped in understanding practical usage of Git and GitHub, including
+repository management, branching strategies, merging, and conflict resolution.
+The project successfully demonstrates version control concepts in a real-world
+Hospital Management System scenario.
