@@ -1,0 +1,634 @@
+/* ===========================
+   UI ENHANCEMENTS – APOLLO HMS
+   =========================== */
+
+/* ---------- TEXT VISIBILITY FIX ---------- */
+body {
+  text-shadow: 0 0 1px rgba(255,255,255,0.15);
+}
+
+h1, h2, h3 {
+  color: #f8fafc;
+}
+
+p {
+  color: #e5e7eb;
+}
+
+/* ---------- NEON GLOW ---------- */
+.glow-blue {
+  box-shadow: 0 0 25px rgba(59,130,246,0.6);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px rgba(34,197,94,0.6);
+}
+
+.glow-red {
+  box-shadow: 0 0 25px rgba(239,68,68,0.6);
+}
+
+/* ---------- PULSE (PENDING / EMERGENCY) ---------- */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(255,0,0,0.4); }
+  50% { box-shadow: 0 0 25px rgba(255,0,0,0.9); }
+  100% { box-shadow: 0 0 10px rgba(255,0,0,0.4); }
+}
+
+.pulse {
+  animation: pulseGlow 1.6s infinite;
+}
+
+/* ---------- PRIORITY BADGES ---------- */
+.badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+}
+
+.badge-emergency {
+  background: linear-gradient(135deg,#dc2626,#7f1d1d);
+  color: white;
+  animation: pulseGlow 1.5s infinite;
+}
+
+.badge-high {
+  background: linear-gradient(135deg,#f59e0b,#b45309);
+  color: white;
+}
+
+.badge-normal {
+  background: linear-gradient(135deg,#22c55e,#166534);
+  color: white;
+}
+
+/* ---------- STAT CARD ICON FLOAT ---------- */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.stat-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ---------- COUNTER ANIMATION ---------- */
+.count-up {
+  transition: all 0.6s ease;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom,#6366f1,#22c55e);
+  border-radius: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 25px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(34,197,94,0.9);
+}
+
+/* ---------- RESOLVE MODAL ---------- */
+.resolve-modal {
+  background: linear-gradient(145deg,#1e293b,#020617);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+}
+
+/* ---------- COMPLETED CARD ---------- */
+.completed-card {
+  border-left: 6px solid #22c55e;
+}
+
+/* ---------- BUTTON RIPPLE ---------- */
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+/* ---------- DARK MODE SMOOTH ---------- */
+html {
+  transition: background-color 0.4s ease;
+}
+
+
+/* ===========================
+   FORM VISIBILITY FIX (CRITICAL)
+   =========================== */
+
+input,
+select,
+textarea {
+  color: #0f172a !important;          /* Dark text for light bg */
+  background-color: #ffffff !important;
+}
+
+/* DARK MODE */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #020617 !important;
+  color: #f8fafc !important;          /* WHITE text */
+  border-color: #475569;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* SELECT OPTIONS */
+select option {
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.dark select option {
+  color: #f8fafc;
+  background-color: #020617;
+}
+
+/* FOCUS GLOW */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.6);
+  border-color: #6366f1;
+}
+
+
+/* ================= TOAST ================= */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-weight: 700;
+  color: white;
+  animation: slideIn 0.4s ease, fadeOut 0.4s ease 3s forwards;
+}
+
+.toast-success {
+  background: linear-gradient(135deg,#22c55e,#15803d);
+  box-shadow: 0 0 25px rgba(34,197,94,0.8);
+}
+
+.toast-error {
+  background: linear-gradient(135deg,#ef4444,#7f1d1d);
+  box-shadow: 0 0 25px rgba(239,68,68,0.8);
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0 }
+  to { transform: translateX(0); opacity: 1 }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0 }
+}
+
+
+/* ================= FONTS ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.stat-title {
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg,#60a5fa,#a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= HOVER IMPACT ================= */
+.card {
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(99,102,241,0.5);
+}
+
+/* Buttons */
+.dashboard-btn {
+  transition: all 0.4s ease;
+}
+
+.dashboard-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
+  box-shadow: 0 0 30px rgba(99,102,241,0.8);
+}
+
+/* Completed card hover */
+.completed-card:hover {
+  box-shadow: 0 0 40px rgba(34,197,94,0.8);
+  transform: translateY(-6px);
+}
+
+/* Timeline item hover */
+.timeline-item:hover {
+  background: rgba(255,255,255,0.05);
+  transform: scale(1.02);
+}
+
+/* Emoji pulse */
+@keyframes emojiPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.stat-icon {
+  animation: emojiPulse 2s infinite;
+}
+
+
+/* ================= BOOK APPOINTMENT PREMIUM UI ================= */
+
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+}
+
+/* Input wrapper */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(2,6,23,0.7);
+  color: #f8fafc;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Light mode fix */
+.input-group input,
+.input-group select {
+  background: rgba(255,255,255,0.85);
+  color: #020617;
+}
+
+/* Icon */
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  opacity: 0.85;
+}
+
+/* Focus glow */
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167,139,250,0.6);
+}
+
+/* Dropdown options */
+.input-group select option {
+  background: #020617;
+  color: #f8fafc;
+}
+
+
+/* ================= ICON MASTER ANIMATION ================= */
+
+/* Combined animation (float + pulse) */
+@keyframes floatPulse {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.15);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Default icon behaviour */
+.stat-icon {
+  animation: floatPulse 3s ease-in-out infinite !important;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover: rotate + zoom + glow */
+.stat-card:hover .stat-icon {
+  transform: rotate(15deg) scale(1.4);
+  filter: drop-shadow(0 0 18px currentColor);
+}
+
+
+/* ================= ICON COLORS ================= */
+
+/* Total Patients */
+.stat-blue .stat-icon {
+  color: #60a5fa; /* blue-400 */
+}
+
+/* Doctors */
+.stat-green .stat-icon {
+  color: #34d399; /* emerald-400 */
+}
+
+/* Pending */
+.stat-yellow .stat-icon {
+  color: #fbbf24; /* amber-400 */
+}
+
+/* Today */
+.stat-purple .stat-icon {
+  color: #c084fc; /* violet-400 */
+}
+
+
+.dashboard-btn:hover {
+  animation: btnPulse 1.2s infinite;
+}
+
+@keyframes btnPulse {
+  0% { box-shadow: 0 0 10px rgba(99,102,241,0.6); }
+  50% { box-shadow: 0 0 25px rgba(139,92,246,0.9); }
+  100% { box-shadow: 0 0 10px rgba(99,102,241,0.6); }
+}
+
+
+/* ================= NEURAL FLOAT EFFECT ================= */
+
+@keyframes neuralFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 6px rgba(99,102,241,0.4));
+  }
+  50% {
+    transform: translateY(-12px) scale(1.18);
+    filter: drop-shadow(0 0 20px rgba(139,92,246,0.9));
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 6px rgba(99,102,241,0.4));
+  }
+}
+
+
+/* Apply neural animation ONLY to stat icons */
+.stat-icon {
+  animation: neuralFloat 3.5s ease-in-out infinite !important;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+/* Hover boost */
+.stat-card:hover .stat-icon {
+  transform: rotate(18deg) scale(1.45);
+  filter:
+    drop-shadow(0 0 25px currentColor)
+    drop-shadow(0 0 45px rgba(255,255,255,0.3));
+}
+
+.stat-blue .stat-icon {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 10px rgba(96,165,250,0.8));
+}
+
+.stat-green .stat-icon {
+  color: #34d399;
+  filter: drop-shadow(0 0 10px rgba(52,211,153,0.8));
+}
+
+.stat-yellow .stat-icon {
+  color: #fbbf24;
+  filter: drop-shadow(0 0 10px rgba(251,191,36,0.8));
+}
+
+.stat-purple .stat-icon {
+  color: #c084fc;
+  filter: drop-shadow(0 0 10px rgba(192,132,252,0.8));
+}
+.stat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: radial-gradient(circle at top,
+    rgba(255,255,255,0.15),
+    transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.stat-card:hover::after {
+  opacity: 1;
+}
+/* ================= GLOBAL ICON FLOAT ================= */
+
+@keyframes softFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= STAT ICON FLOAT + GLOW ================= */
+
+.stat-icon {
+  animation: softFloat 3.5s ease-in-out infinite !important;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover = premium effect */
+.stat-card:hover .stat-icon {
+  transform: rotate(12deg) scale(1.4);
+  filter: drop-shadow(0 0 22px currentColor);
+}
+/* ================= STAT ICON COLORS ================= */
+
+.stat-blue .stat-icon {
+  color: #60a5fa;   /* Blue */
+}
+
+.stat-green .stat-icon {
+  color: #34d399;   /* Green */
+}
+
+.stat-yellow .stat-icon {
+  color: #fbbf24;   /* Yellow */
+}
+
+.stat-purple .stat-icon {
+  color: #c084fc;   /* Purple */
+}
+/* ================= DASHBOARD BUTTON ICON FLOAT ================= */
+
+.dashboard-btn {
+  position: relative;
+}
+
+.dashboard-btn span,
+.dashboard-btn::first-letter {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+/* Hover glow */
+.dashboard-btn:hover {
+  box-shadow: 0 0 28px rgba(99,102,241,0.8);
+}
+.dashboard-btn:nth-child(1) { color: #60a5fa; } /* Patients */
+.dashboard-btn:nth-child(2) { color: #34d399; } /* Doctors */
+.dashboard-btn:nth-child(3) { color: #fbbf24; } /* Book */
+.dashboard-btn:nth-child(4) { color: #f87171; } /* Resolve */
+.dashboard-btn:nth-child(5) { color: #22c55e; } /* Completed */
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top,
+    rgba(255,255,255,0.18),
+    transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.stat-card:hover::after {
+  opacity: 1;
+}
+/* ================= SVG-LIKE ICON FEEL ================= */
+
+.stat-icon {
+  font-size: 3.2rem;
+  filter:
+    drop-shadow(0 0 6px currentColor)
+    drop-shadow(0 0 14px rgba(255,255,255,0.35));
+}
+
+/* ================= DASHBOARD BACKGROUND ================= */
+
+/* Full dashboard background */
+body {
+  background:
+    /* Dark overlay */
+    linear-gradient(
+      rgba(2,6,23,0.92),
+      rgba(2,6,23,0.92)
+    ),
+
+    /* Hospital image */
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Extra premium glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(99,102,241,0.15), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(34,197,94,0.12), transparent 45%);
+  pointer-events: none;
+  z-index: -1;
+}
+/* ================= DASHBOARD BACKGROUND (VISIBLE FIX) ================= */
+
+body {
+  background:
+    linear-gradient(
+      rgba(2,6,23,0.75),
+      rgba(2,6,23,0.85)
+    ),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Soft medical glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(59,130,246,0.25), transparent 45%),
+    radial-gradient(circle at 75% 60%, rgba(34,197,94,0.22), transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+body {
+  backdrop-filter: blur(1px);
+}
