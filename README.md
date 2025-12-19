@@ -23,3 +23,9 @@ Hospital-Management-System/
 │   └── ui-enhancements.css    # Additional UI enhancements
 │
 └── README.md                  # Project documentation
+
+
+## 🧪 Testing Notes
+
+Basic manual testing was performed to verify frontend navigation
+and backend server startup during development.
