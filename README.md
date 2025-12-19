@@ -1,4 +1,5 @@
 ## 📁 Project Structure
+> This project demonstrates Git branching, merging, and conflict resolution.
 
 Hospital-Management-System/
 ├── backend/
