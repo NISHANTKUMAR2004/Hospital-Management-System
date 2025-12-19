@@ -1,7 +1,7 @@
 ## 📁 Project Structure
 > This project demonstrates standard Git workflows including branching, merging, and conflict resolution.
 
-
+```
 Hospital-Management-System/
 ├── backend/
 │   ├── server.js              # Backend server entry point
@@ -25,7 +25,7 @@ Hospital-Management-System/
 │   └── ui-enhancements.css    # Additional UI enhancements
 │
 └── README.md                  # Project documentation
-
+'''
 
 ## 🧪 Testing Notes
 
@@ -50,6 +50,10 @@ The following Git commands were used during the development of this project:
 ## 📸 Screenshots
 
 The following screenshots are included to demonstrate Git operations:
+-->branch creation
+## 📸 Git Commit History
+
+![Git Log Screenshot](docs/lsd.png)
 
 - Git commit history (`git log --oneline`)
 - Branch creation and listing
