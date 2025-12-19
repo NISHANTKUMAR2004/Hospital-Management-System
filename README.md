@@ -1,4 +1,6 @@
 ## 📁 Project Structure
+> This project follows standard Git workflows with clean commit history.
+
 
 Hospital-Management-System/
 ├── backend/
