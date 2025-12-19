@@ -1,5 +1,5 @@
 ## 📁 Project Structure
-> This project follows standard Git workflows with clean commit history.
+> This project demonstrates standard Git workflows including branching, merging, and conflict resolution.
 
 
 Hospital-Management-System/
