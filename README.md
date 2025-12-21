@@ -45,7 +45,7 @@ The following Git commands were used during the development of this project:
 - `git merge` – Merge branches  
 - `git remote add origin` – Connect local repo to GitHub  
 - `git push` – Push commits to remote repository  
-- `git pull` – Sync changes from GitHub  [1-a39ac270-1eed-45cd-8c81-bd7809d7f89d (2).pdf](https://github.com/user-attachments/files/24278659/1-a39ac270-1eed-45cd-8c81-bd7809d7f89d.2.pdf)
+- `git pull` – Sync changes from GitHub  
 
 
 ## 📸 Screenshots
