@@ -45,23 +45,12 @@ The following Git commands were used during the development of this project:
 - `git merge` – Merge branches  
 - `git remote add origin` – Connect local repo to GitHub  
 - `git push` – Push commits to remote repository  
-- `git pull` – Sync changes from GitHub  
+- `git pull` – Sync changes from GitHub  [1-a39ac270-1eed-45cd-8c81-bd7809d7f89d (2).pdf](https://github.com/user-attachments/files/24278659/1-a39ac270-1eed-45cd-8c81-bd7809d7f89d.2.pdf)
+
 
 ## 📸 Screenshots
 
-The following screenshots are included to demonstrate Git operations:
--->branch creation
-## 📸 Git Commit History
-
-![Git Log Screenshot](branch_creation.png)
-
-
-- Git commit history (`git log --oneline`)
-- Branch creation and listing
-- Merge operations
-- Merge conflict and resolution
-- GitHub repository view
-
+The screensorts are there in docs file
 ## ⚠️ Challenges Faced
 
 - Managing multiple branches simultaneously  
