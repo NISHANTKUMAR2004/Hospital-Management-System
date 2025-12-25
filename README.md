@@ -50,14 +50,14 @@ This project emphasizes **clarity, structure, discipline, and professionalism**.
 │ ├── style.css
 │ └── ui-enhancements.css
 │
-<<<<<<< HEAD
+
 └── README.md
 ```
 
 
 📌 The project follows a clean **frontend–backend separation**, aligned with real-world software architecture.
 
----
+
 =======
 └── README.md                  # Project documentation
 '''
@@ -87,7 +87,7 @@ The following Git commands were used during the development of this project:
 
 The screensorts are there in docs file
 ## ⚠️ Challenges Faced
->>>>>>> f56075a69f35f761ad73b8071f92a10748443320
+
 
 ## 🔄🔄 GIT WORKFLOW & COMMIT STRATEGY
 
