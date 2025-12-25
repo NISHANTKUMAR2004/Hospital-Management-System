@@ -50,6 +50,7 @@ This project emphasizes **clarity, structure, discipline, and professionalism**.
 │ ├── style.css
 │ └── ui-enhancements.css
 │
+<<<<<<< HEAD
 └── README.md
 ```
 
@@ -57,6 +58,36 @@ This project emphasizes **clarity, structure, discipline, and professionalism**.
 📌 The project follows a clean **frontend–backend separation**, aligned with real-world software architecture.
 
 ---
+=======
+└── README.md                  # Project documentation
+'''
+
+## 🧪 Testing Notes
+
+Basic manual testing was performed to verify frontend navigation
+and backend server startup during development.
+
+## 🛠️ Git Commands Used
+
+The following Git commands were used during the development of this project:
+
+- `git init` – Initialize local Git repository  
+- `git status` – Check repository status  
+- `git add` – Stage changes  
+- `git commit` – Commit changes with meaningful messages  
+- `git branch` – Create and list branches  
+- `git checkout` – Switch between branches  
+- `git merge` – Merge branches  
+- `git remote add origin` – Connect local repo to GitHub  
+- `git push` – Push commits to remote repository  
+- `git pull` – Sync changes from GitHub  
+
+
+## 📸 Screenshots
+
+The screensorts are there in docs file
+## ⚠️ Challenges Faced
+>>>>>>> f56075a69f35f761ad73b8071f92a10748443320
 
 ## 🔄🔄 GIT WORKFLOW & COMMIT STRATEGY
 
